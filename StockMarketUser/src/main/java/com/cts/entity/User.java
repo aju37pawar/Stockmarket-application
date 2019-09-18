@@ -37,6 +37,15 @@ public class User {
 	@Column(name = "us_confirmed",length = 10,nullable = false)
 	String confirmed;
 
+	public User(String username, String password, String userType, String email, String mobile, String confirmed) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.userType = userType;
+		this.email = email;
+		this.mobile = mobile;
+		this.confirmed = confirmed;
+	}
 	public User(int userId, String username, String password, String userType, String email, String mobile,
 			String confirmed) {
 		super();
