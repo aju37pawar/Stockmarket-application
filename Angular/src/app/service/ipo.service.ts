@@ -8,24 +8,19 @@ import { Ipo } from '../models/ipo';
 })
 export class IpoService {
 
-  baseUrl = 'http://localhost:8082/api';
+  baseUrl = 'http://localhost:8992/ipo';
 
   constructor(private http: HttpClient) { }
 
-  getIpos(): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/ipos`);
+  getListOfIpos(): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}`);
   }
 
   addIpo(ipo: Ipo): Observable<any> {
-    return this.http.post(`${this.baseUrl}/ipo/create`, ipo);
+    return this.http.post(`${this.baseUrl}`, ipo);
   }
 
   updateIpo(ipo: Ipo): Observable<any> {
-    return this.http.post(`${this.baseUrl}/ipo/create`, ipo);
+    return this.http.post(`${this.baseUrl}`, ipo);
   }
-
-  getIpoById(ipoId: number): Observable<Ipo> {
-    return this.http.get<Ipo>(`${this.baseUrl}/ipo/${ipoId}`);
-  }
-  
 }

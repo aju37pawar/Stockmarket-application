@@ -25,7 +25,7 @@ export class SignUpComponent implements OnInit {
     this.userService.registerUser(new User(this.username, this.password, this.email, "USER", this.mobile)).subscribe(
       async res => { 
         this.user = await res;
-        this.router.navigate(['sign-in'])
+        this.router.navigate(['login'])
        },
       error => console.log(error)
     );

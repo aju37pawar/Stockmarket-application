@@ -13,9 +13,9 @@ import { ComparisonDetailsComponent } from './user/comparison-details/comparison
 import { UploadComponent } from './admin/upload-excel/upload-excel.component';
 import { AddCompanyComponent } from './admin/company-add/company-add.component';
 import { AddStockExchangeComponent } from './admin/stockexchange-add/stockexchange-add.component';
-import { ListCompanyComponent } from './admin/company-list/company-list.component';
 import { ListIpoComponent } from './admin/list-ipo/list-ipo.component';
-import { ListStockExchangeComponent } from './admin/stockexchange-list/stockexchange-list.component';
+import { CompanyCatalogue } from './admin/company-catalogue/company-catalogue.component';
+import { StockexchangeCatalogue } from './admin/stockexchange-catalogue/stockexchange-catalogue.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -27,10 +27,10 @@ const routes: Routes = [
       { path: '', component: UploadComponent },
       { path: 'uploadexcel', component: UploadComponent },
       { path: 'company-add', component: AddCompanyComponent },
-      { path: 'companylist', component: ListCompanyComponent },
+      { path: 'companylist', component: CompanyCatalogue },
       { path: 'update-company/:id', component: UpdateCompanyComponent },
       { path: 'stockexchange-add', component: AddStockExchangeComponent },
-      { path: 'stockexchange-list', component: ListStockExchangeComponent},
+      { path: 'stockexchange-list', component: StockexchangeCatalogue},
       { path: 'ipolist', component:  ListIpoComponent},
       { path: 'update-ipo/:id', component: UpdateIpoComponent }
     ]
@@ -41,7 +41,7 @@ const routes: Routes = [
       { path: '', component: DetailsComponent },
       { path: 'details', component: DetailsComponent },
       { path: 'user-update', component: DetailUpdateComponent },
-      { path: 'search', component: ListCompanyComponent },
+      { path: 'search', component: CompanyCatalogue },
       { path: 'ipomanage', component: IpoManagementComponent },
       { path: 'compare-details', component: ComparisonDetailsComponent }
     ]

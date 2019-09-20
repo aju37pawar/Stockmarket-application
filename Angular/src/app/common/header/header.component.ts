@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
     this.userId = parseInt(userId);
     if (!userId) {
       alert("Logged out of your account, Please Login again")
-      this.router.navigate(['sign-in']);
+      this.router.navigate(['login']);
       return;
     }
     this.userService.getUserById(this.userId).subscribe(
@@ -39,7 +39,7 @@ export class HeaderComponent implements OnInit {
 
   logout(){
     localStorage.removeItem("userId");
-    this.router.navigate(['sign-in']);
+    this.router.navigate(['login']);
   }
 
 }

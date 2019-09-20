@@ -20,10 +20,10 @@ export class ListIpoComponent implements OnInit {
     this.userId = parseInt(userId);
     if (!userId) {
       alert("Logged out of your account, Please Login again")
-      this.router.navigate(['sign-in']);
+      this.router.navigate(['login']);
       return;
     }
-    this.ipoService.getIpos().subscribe(async res => {
+    this.ipoService.getListOfIpos().subscribe(async res => {
       this.ipos = await res;
       console.log(this.ipos);
     })

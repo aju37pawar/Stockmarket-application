@@ -8,23 +8,15 @@ import { StockExchange } from '../models/stock-exchange';
 })
 export class StockExchangeService {
 
-  baseUrl = 'http://localhost:8082/api';
+  baseUrl = 'http://localhost:8992';
 
   constructor(private http: HttpClient) { }
 
-  getStockExhanges(): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/stockExchanges`);
+  getListOfStockExhanges(): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/stockExchange`);
   }
 
   addStockExhange(stockExhange: StockExchange): Observable<any> {
-    return this.http.post(`${this.baseUrl}/stockExchange/create`, stockExhange);
-  }
-
-  updateStockExhange(stockExhange: StockExchange): Observable<any> {
-    return this.http.post(`${this.baseUrl}/stockExhange/create`, stockExhange);
-  }
-
-  getStockExhangeById(stockExhangeId: StockExchange): Observable<StockExchange> {
-    return this.http.get<StockExchange>(`${this.baseUrl}/stockExhange/${stockExhangeId}`);
+    return this.http.post(`${this.baseUrl}/stockExchange`, stockExhange);
   }
 }

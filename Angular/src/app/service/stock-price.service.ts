@@ -8,32 +8,11 @@ import { StockPrice } from '../models/stock-price';
 })
 export class StockPriceService {
 
-  baseUrl = 'http://localhost:8082/api';
+  baseUrl = 'http://localhost:8992/stockprice';
 
   constructor(private http: HttpClient) { }
 
   getStockPrices(): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/stockPrices`);
+    return this.http.get<any>(`${this.baseUrl}`);
   }
-
-  addStockPrice(stockPrice: StockPrice): Observable<any> {
-    return this.http.post(`${this.baseUrl}/stockPrice/create`, stockPrice);
-  }
-
-  updateStockPrice(stockPrice: StockPrice): Observable<any> {
-    return this.http.post(`${this.baseUrl}/stockPrice/create`, stockPrice);
-  }
-
-  getStockPriceById(stockPriceId: StockPrice): Observable<StockPrice> {
-    return this.http.get<StockPrice>(`${this.baseUrl}/stockPrice/${stockPriceId}`);
-  }
-
-  getStockPricesByCompanyId(companyId): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/stockPrices/${companyId}`);
-  }
-
-  getStockPricesCompare1(companyId, stockExchangeId, periodicity): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/stockPrices/${companyId}/${stockExchangeId}/${periodicity}`);
-  }
-
 }

@@ -24,7 +24,7 @@ export class UpdateIpoComponent implements OnInit {
     this.userId = parseInt(userId);
     if (!userId) {
       alert("Logged out of your account, Please Login again")
-      this.router.navigate(['sign-in']);
+      this.router.navigate(['login']);
       return;
     }
 
@@ -33,11 +33,9 @@ export class UpdateIpoComponent implements OnInit {
       console.log(this.id);
     });
 
-    this.ipoService.getIpoById(this.id).subscribe(async res => {
-      this.ipo = await res;
-    });
+    
 
-    this.stockExchangeService.getStockExhanges().subscribe(async res => {
+    this.stockExchangeService.getListOfStockExhanges().subscribe(async res => {
       this.stockExchanges = await res;
       console.log(this.stockExchanges);
     });
@@ -48,7 +46,7 @@ export class UpdateIpoComponent implements OnInit {
       async res => {
         this.ipo = await res;
         console.log(this.ipo);
-        this.router.navigate(['admin/list-ipo']);
+        this.router.navigate(['admin/ipolist']);
       },
       error => console.log(error)
     );

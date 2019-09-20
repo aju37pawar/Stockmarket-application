@@ -21,11 +21,11 @@ import { FooterComponent } from './common/footer/footer.component';
 import { HeaderComponent } from './common/header/header.component';
 import { SignInComponent } from './common/sign-in/sign-in.component';
 import { SignUpComponent } from './common/sign-up/sign-up.component';
-import { ListStockExchangeComponent } from './admin/stockexchange-list/stockexchange-list.component';
 import { AddCompanyComponent } from './admin/company-add/company-add.component';
 import { UploadComponent } from './admin/upload-excel/upload-excel.component';
 import { AddStockExchangeComponent } from './admin/stockexchange-add/stockexchange-add.component';
-import { ListCompanyComponent } from './admin/company-list/company-list.component';
+import { CompanyCatalogue } from './admin/company-catalogue/company-catalogue.component';
+import { StockexchangeCatalogue } from './admin/stockexchange-catalogue/stockexchange-catalogue.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import { ListCompanyComponent } from './admin/company-list/company-list.componen
     AddCompanyComponent,
     AddStockExchangeComponent,
     ListIpoComponent,
-    ListCompanyComponent,
+    CompanyCatalogue,
     UpdateCompanyComponent,
     UpdateIpoComponent,
     UploadComponent,
@@ -48,7 +48,7 @@ import { ListCompanyComponent } from './admin/company-list/company-list.componen
     HeaderComponent,
     SignInComponent,
     SignUpComponent,
-    ListStockExchangeComponent
+    StockexchangeCatalogue
   ],
   imports: [
     BrowserModule,

@@ -23,7 +23,7 @@ export class UploadComponent implements OnInit {
     this.userId = parseInt(userId);
     if (!userId) {
       alert("Logged out of your account, Please Login again")
-      this.router.navigate(['sign-in']);
+      this.router.navigate(['login']);
       return;
     }
   }

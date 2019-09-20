@@ -8,27 +8,15 @@ import { Company } from '../models/company';
 })
 export class CompanyService {
 
-  baseUrl = 'http://localhost:8082/api';
+  baseUrl = 'http://localhost:8992/company';
   
   constructor(private http: HttpClient) { }
 
-  getCompanies(): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/companies`);
+  getListOfCompanies(): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}`);
   }
 
   addCompany(company: Company): Observable<any> {
-    return this.http.post(`${this.baseUrl}/company/create`, company);
-  }
-
-  updateCompany(company: Company): Observable<any> {
-    return this.http.post(`${this.baseUrl}/company/create`, company);
-  }
-
-  getCompanyById(companyId: number): Observable<Company> {
-    return this.http.get<Company>(`${this.baseUrl}/company/${companyId}`);
-  }
-
-  getCompaniesBySectorName(sectorName: String): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/companies/${sectorName}`);
+    return this.http.post(`${this.baseUrl}`, company);
   }
 }

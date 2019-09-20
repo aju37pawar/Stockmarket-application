@@ -21,7 +21,7 @@ export class AddStockExchangeComponent implements OnInit {
     this.userId = parseInt(userId);
     if (!userId) {
       alert("Logged out of your account, Please Login again")
-      this.router.navigate(['sign-in']);
+      this.router.navigate(['login']);
       return;
     }
   }
@@ -32,7 +32,7 @@ export class AddStockExchangeComponent implements OnInit {
       async res => {
         this.stockExchange = await res;
         console.log(this.stockExchange);
-        this.router.navigate(['admin/list-stock-exchange']);
+        this.router.navigate(['admin/stockexchange-list']);
       },
       error => console.log(error)
     );
