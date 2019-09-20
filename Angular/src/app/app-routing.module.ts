@@ -11,11 +11,11 @@ import { DetailUpdateComponent } from './user/detail-update/detail-update.compon
 import { IpoManagementComponent } from './user/ipo-management/ipo-management.component';
 import { ComparisonDetailsComponent } from './user/comparison-details/comparison-details.component';
 import { AddCompanyComponent } from './admin/company-add/company-add.component';
-import { AddStockExchangeComponent } from './admin/stockexchange-add/stockexchange-add.component';
 import { ListIpoComponent } from './admin/list-ipo/list-ipo.component';
 import { CompanyCatalogue } from './admin/company-catalogue/company-catalogue.component';
 import { StockexchangeCatalogue } from './admin/stockexchange-catalogue/stockexchange-catalogue.component';
 import { UploadExcelComponent } from './admin/upload-excel/upload-excel.component';
+import { StockExchangeAddComponent } from './admin/stockexchange-add/stockexchange-add.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -29,7 +29,7 @@ const routes: Routes = [
       { path: 'company-add', component: AddCompanyComponent },
       { path: 'companylist', component: CompanyCatalogue },
       { path: 'update-company/:id', component: UpdateCompanyComponent },
-      { path: 'stockexchange-add', component: AddStockExchangeComponent },
+      { path: 'stockexchange-add', component: StockExchangeAddComponent },
       { path: 'stockexchange-list', component: StockexchangeCatalogue},
       { path: 'ipolist', component:  ListIpoComponent},
       { path: 'update-ipo/:id', component: UpdateIpoComponent }

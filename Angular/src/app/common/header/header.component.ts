@@ -29,12 +29,7 @@ export class HeaderComponent implements OnInit {
       this.router.navigate(['login']);
       return;
     }
-    this.userService.getUserById(this.userId).subscribe(
-      async res => {
-        this.user = await res;
-        this.username = this.user.username;
-      }, error => console.log(error)
-    )
+    
   }
 
   logout(){

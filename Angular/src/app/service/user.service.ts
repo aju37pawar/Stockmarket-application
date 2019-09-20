@@ -8,19 +8,19 @@ import { User } from '../models/user';
 })
 export class UserService {
 
-  baseUrl = 'http://localhost:8991';
+  baseUrl = 'http://localhost:8991/user';
   
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/user`);
+    return this.http.get<any>(`${this.baseUrl}`);
   }
 
   registerUser(user: User): Observable<any> {
-    return this.http.post(`${this.baseUrl}/user`, user);
+    return this.http.post(`${this.baseUrl}`, user);
   }
 
   updateUser(user: User): Observable<any> {
-    return this.http.post(`${this.baseUrl}/user/edit`, user);
+    return this.http.post(`${this.baseUrl}/edit`, user);
   }
 }

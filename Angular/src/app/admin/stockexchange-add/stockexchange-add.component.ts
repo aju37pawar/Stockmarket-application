@@ -5,11 +5,11 @@ import { StockExchangeService } from 'src/app/service/stock-exchange.service';
 import { StockExchange } from 'src/app/models/stock-exchange';
 
 @Component({
-  selector: 'add-stock-exchange',
-  templateUrl: './add-stock-exchange.component.html',
-  styleUrls: ['./add-stock-exchange.component.css']
+  selector: 'stockexchange-add',
+  templateUrl: './stockexchange-add.component.html',
+  styleUrls: ['./stockexchange-add.component.css']
 })
-export class AddStockExchangeComponent implements OnInit {
+export class StockExchangeAddComponent implements OnInit {
 
   userId: number;
   stockExchange: StockExchange = new StockExchange('', '', '');

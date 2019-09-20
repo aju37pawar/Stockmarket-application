@@ -4,9 +4,9 @@ import { CompanyService } from 'src/app/service/company.service';
 import { Company } from 'src/app/models/company';
 
 @Component({
-  selector: 'app-list-company',
-  templateUrl: './list-company.component.html',
-  styleUrls: ['./list-company.component.css']
+  selector: 'app-company-catalogue',
+  templateUrl: './company-catalogue.component.html',
+  styleUrls: ['./company-catalogue.component.css']
 })
 export class CompanyCatalogue implements OnInit {
 

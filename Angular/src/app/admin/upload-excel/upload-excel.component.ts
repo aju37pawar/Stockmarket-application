@@ -4,9 +4,9 @@ import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { UploadService } from 'src/app/service/upload.service';
 
 @Component({
-  selector: 'app-upload',
-  templateUrl: './upload.component.html',
-  styleUrls: ['./upload.component.css']
+  selector: 'app-upload-excel',
+  templateUrl: './upload-excel.component.html',
+  styleUrls: ['./upload-excel.component.css']
 })
 export class UploadExcelComponent implements OnInit {
 

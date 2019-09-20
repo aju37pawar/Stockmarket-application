@@ -4,9 +4,9 @@ import { StockExchangeService } from 'src/app/service/stock-exchange.service';
 import { StockExchange } from 'src/app/models/stock-exchange';
 
 @Component({
-  selector: 'app-list-stock-exchange',
-  templateUrl: './list-stock-exchange.component.html',
-  styleUrls: ['./list-stock-exchange.component.css']
+  selector: 'app-stockexchange-catalogue',
+  templateUrl: './stockexchange-catalogue.component.html',
+  styleUrls: ['./stockexchange-catalogue.component.css']
 })
 export class StockexchangeCatalogue implements OnInit {
 

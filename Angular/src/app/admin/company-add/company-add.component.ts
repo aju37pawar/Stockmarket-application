@@ -8,9 +8,9 @@ import { StockExchange } from 'src/app/models/stock-exchange';
 import { Sector } from 'src/app/models/sector';
 
 @Component({
-  selector: 'add-company',
-  templateUrl: './add-company.component.html',
-  styleUrls: ['./add-company.component.css']
+  selector: 'company-add',
+  templateUrl: './company-add.component.html',
+  styleUrls: ['./company-add.component.css']
 })
 export class AddCompanyComponent implements OnInit {
 
