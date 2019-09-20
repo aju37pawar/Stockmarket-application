@@ -10,12 +10,12 @@ import { DetailsComponent } from './user/details/details.component';
 import { DetailUpdateComponent } from './user/detail-update/detail-update.component';
 import { IpoManagementComponent } from './user/ipo-management/ipo-management.component';
 import { ComparisonDetailsComponent } from './user/comparison-details/comparison-details.component';
-import { UploadComponent } from './admin/upload-excel/upload-excel.component';
 import { AddCompanyComponent } from './admin/company-add/company-add.component';
 import { AddStockExchangeComponent } from './admin/stockexchange-add/stockexchange-add.component';
 import { ListIpoComponent } from './admin/list-ipo/list-ipo.component';
 import { CompanyCatalogue } from './admin/company-catalogue/company-catalogue.component';
 import { StockexchangeCatalogue } from './admin/stockexchange-catalogue/stockexchange-catalogue.component';
+import { UploadExcelComponent } from './admin/upload-excel/upload-excel.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -24,8 +24,8 @@ const routes: Routes = [
   {
       path: 'admin', component: AdminComponent,
     children: [
-      { path: '', component: UploadComponent },
-      { path: 'uploadexcel', component: UploadComponent },
+      { path: '', component: UploadExcelComponent },
+      { path: 'uploadexcel', component: UploadExcelComponent },
       { path: 'company-add', component: AddCompanyComponent },
       { path: 'companylist', component: CompanyCatalogue },
       { path: 'update-company/:id', component: UpdateCompanyComponent },

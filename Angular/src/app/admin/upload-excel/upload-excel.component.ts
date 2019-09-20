@@ -8,7 +8,7 @@ import { UploadService } from 'src/app/service/upload.service';
   templateUrl: './upload.component.html',
   styleUrls: ['./upload.component.css']
 })
-export class UploadComponent implements OnInit {
+export class UploadExcelComponent implements OnInit {
 
   userId: number;
   selectedFiles: FileList;
